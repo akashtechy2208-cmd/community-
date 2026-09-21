@@ -620,6 +620,17 @@ export default function Home() {
                   <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
                 </a>
               </Magnet>
+              <Magnet magnetStrength={3}>
+                <a
+                  href="https://www.instagram.com/hackspire.root?stkn=Mm00cng1aGd6cHd6"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="group flex w-fit items-center gap-3 border border-white/60 bg-white/10 px-6 py-4 font-mono text-[10px] uppercase tracking-[0.2em] backdrop-blur-sm transition-all hover:bg-black hover:text-white hover:border-black"
+                >
+                  <ShinyText text="Follow on Instagram" speed={3} />
+                  <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+                </a>
+              </Magnet>
             </div>
           </BlurIn>
         </div>
@@ -645,6 +656,14 @@ export default function Home() {
           className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/50 transition-colors hover:text-[#ff2b2b]"
         >
           Join us on Discord ↗
+        </a>
+        <a
+          href="https://www.instagram.com/hackspire.root?stkn=Mm00cng1aGd6cHd6"
+          target="_blank"
+          rel="noreferrer"
+          className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/50 transition-colors hover:text-[#ff2b2b]"
+        >
+          Instagram ↗
         </a>
         <span className="font-mono text-[9px] uppercase tracking-[0.18em] text-white/30">
           Frontend preview / no backend
