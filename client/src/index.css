@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@font-face {
+  font-family: 'Podium Sharp';
+  src: url('https://db.onlinewebfonts.com/c/8b75d9dcff6a48c35a46656192adf019?family=FSP+DEMO+-+PODIUM+Sharp+4.11') format('woff2');
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --color-background: #000;
+  --color-foreground: #fff;
+  --font-podium: 'Podium Sharp', Impact, sans-serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+:root { --background: #000; --foreground: #fff; }
+
+@layer base {
+  * { box-sizing: border-box; }
+  html, body, #root { min-height: 100%; margin: 0; }
+  body { background: #000; color: #fff; font-family: 'Inter', sans-serif; }
+  button, a, input { font: inherit; }
+  button:focus-visible, a:focus-visible { outline: 2px solid white; outline-offset: 4px; }
+}
+
+@layer utilities {
+  .font-podium { font-family: 'Podium Sharp', Impact, sans-serif; }
+  .font-inter { font-family: 'Inter', sans-serif; }
+  @keyframes fade-up { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+  .animate-fade-up { animation: fade-up .8s ease-out 0s forwards; }
+  .animate-fade-up-delay-1 { animation: fade-up .8s ease-out .2s forwards; }
+  .animate-fade-up-delay-2 { animation: fade-up .8s ease-out .4s forwards; }
+  .animate-fade-up-delay-3 { animation: fade-up .8s ease-out .6s forwards; }
+  .animate-fade-up-delay-4 { animation: fade-up .8s ease-out .8s forwards; }
+  @keyframes shine {
+    0% { background-position: 100% 50%; }
+    100% { background-position: -100% 50%; }
+  }
+  .animate-shine {
+    animation: shine 4s linear infinite;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
+}
